@@ -12,20 +12,20 @@ public class GraphColouringDriver {
 		test(graph1, 2, GraphColourerType.BACKTRACKING);
 		System.out.println("");
 		
-//		boolean[][] graph2 = {{false, true, true, true}, 
-//				{true, false, true, false},
-//				{true, true, false, true},
-//				{true, false, true, false}};
-//		test(graph2, 3, GraphColourerType.BRUTEFORCE);	
-//		test(graph2, 3, GraphColourerType.BACKTRACKING);
-//		System.out.println("");
+		boolean[][] graph2 = {{false, true, true, true}, 
+				{true, false, true, false},
+				{true, true, false, true},
+				{true, false, true, false}};
+		test(graph2, 3, GraphColourerType.BRUTEFORCE);	
+		test(graph2, 3, GraphColourerType.BACKTRACKING);
+		System.out.println("");
 		
-//		boolean[][] graph3 = {{false, true, true}, 
-//				{true, false, true},
-//				{true, true, false}};			
-//		test(graph3, 2, GraphColourerType.BRUTEFORCE);	
-//		//test(graph3, 3, GraphColourerType.BACKTRACKING);
-//		System.out.println("");
+		boolean[][] graph3 = {{false, true, true}, 
+				{true, false, true},
+				{true, true, false}};			
+		test(graph3, 2, GraphColourerType.BRUTEFORCE);	
+		test(graph3, 3, GraphColourerType.BACKTRACKING);
+		System.out.println("");
 	}
 	
 	private static void test(boolean[][] graph, int nColours, GraphColourerType type){

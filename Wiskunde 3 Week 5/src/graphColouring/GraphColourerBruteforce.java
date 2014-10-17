@@ -1,13 +1,12 @@
 package graphColouring;
 
-import java.util.Arrays;
 
 public class GraphColourerBruteforce implements IGraphColourer {
 
 	@Override	
 	public int[] colour(boolean[][] graph, int nColours) {
 		int[] colours = new int[graph.length];
-		return (nodeColouring(graph, colours, nColours, 0)) ? colours : null;
+		return (nodeColouring(graph, colours, nColours, 1)) ? colours : null;
 	}
 	
 	private boolean nodeColouring(boolean[][] graph, int[] colours, int nColours, int node){

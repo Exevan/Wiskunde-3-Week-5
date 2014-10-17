@@ -6,7 +6,7 @@ public class GraphColourerBacktracking implements IGraphColourer {
 	@Override
 	public int[] colour(boolean[][] graph, int nColours) {
 		int[] colours = new int[graph.length];
-		return (nodeColouring(graph, colours, nColours, 0)) ? colours : null;
+		return (nodeColouring(graph, colours, nColours, 1)) ? colours : null;
 	}
 
 
@@ -30,6 +30,19 @@ public class GraphColourerBacktracking implements IGraphColourer {
 			if(graph[node][i] && colours[i] == colour)
 				return false;
 		return true;
-	}
 
+		//Alternative inefficient method
+		//		int nodes = colours.length;
+		//		int[] colours2 = new int[nodes];
+		//		for(int i=0; i<nodes; ++i)
+		//			colours2[i] = colours[i];
+		//		colours2[node] = colour;
+		//		for(int i=0; i<=node; ++i){
+		//			for(int j=i+1; j<=node; ++j){
+		//				if(graph[i][j] && colours2[i] == colours2[j])
+		//					return false;
+		//			}
+		//		}
+		//		return true;
+	}
 }

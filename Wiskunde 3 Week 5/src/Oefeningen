@@ -34,4 +34,27 @@ d)	De nodeColouring() methode wordt 5 keer aangeroepen en colours bevat telkens 
 	[1, 2, 3, 2]
 	
 Oefening 4
-a)	
+a) Er worden 8 "verschillende" kleurencombinaties getest:
+	[1, 1, 1]
+	[1, 1, 2]
+	[1, 2, 1]
+	[1, 2, 2]
+	[2, 1, 1]
+	[2, 1, 2]
+	[2, 2, 1]
+	[2, 2, 2]
+b) De eerste combinatie bestaat enkel uit kleur 1 en de laatste combinatie bestaat enkel uit kleur 2.
+c) De kleurencombinaties zijn symmetrisch verdeeld:
+	  |	[1, 1, 1]	[2, 2, 2] ^
+	  |	[1, 1, 2]	[2, 2, 1] |
+	  |	[1, 2, 1]	[2, 1, 2] |
+	  V	[1, 2, 2]	[2, 1, 1] |
+d) Er moeten maar 4 combinaties gecontroleerd worden, het resultaat van elke test geld ook voor de "inverse"
+	van de gecontroleerde kleurencombinatie.
+e) Nee, dit kan enkel als men een 2-kleuring wil berekenen. Enkel dan zal het resultaat voldoende symmetrisch zijn
+	om slecht de helft van de kleurencombinaties te controleren.
+f) Ja, het maakt niet uit of we als antwoord [1, 2, 3, 2] of [2, 3, 1, 3] bekomen want beide zijn correct.
+	We kunnen dus veilig een vaste kleur kieze voor de eerste node.
+g) hint: er moet in brute force en backtrack telkens maar 1 getal aangepast worden
+
+	
