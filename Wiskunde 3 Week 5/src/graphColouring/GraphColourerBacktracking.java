@@ -1,6 +1,5 @@
 package graphColouring;
 
-import java.util.Arrays;
 
 public class GraphColourerBacktracking implements IGraphColourer {
 
@@ -27,18 +26,9 @@ public class GraphColourerBacktracking implements IGraphColourer {
 	}
 
 	private boolean isValid(boolean[][] graph, int[] colours, int node, int colour){
-		System.out.println(Arrays.toString(colours));
-		int nodes = colours.length;
-		int[] colours2 = new int[nodes];
-		for(int i=0; i<nodes; ++i)
-			colours2[i] = colours[i];
-		colours2[node] = colour;
-		for(int i=0; i<=node; ++i){
-			for(int j=i+1; j<=node; ++j){
-				if(graph[i][j] && colours2[i] == colours2[j])
-					return false;
-			}
-		}
+		for(int i=0; i<node; ++i)
+			if(graph[node][i] && colours[i] == colour)
+				return false;
 		return true;
 	}
 
