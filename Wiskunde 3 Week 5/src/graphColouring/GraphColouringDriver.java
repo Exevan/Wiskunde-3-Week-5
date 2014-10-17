@@ -5,11 +5,21 @@ import java.util.Arrays;
 public class GraphColouringDriver {
 
 	public static void main(String[] args) {
-		boolean[][] graph1 = {{false, true, false}, 
-							 {true, false, true},
-							 {false, true, false}};
-				
-		test(graph1, 2, GraphColourerType.BRUTEFORCE);		
+//		boolean[][] graph1 = {{false, true, false}, 
+//				{true, false, true},
+//				{false, true, false}};			
+//		test(graph1, 2, GraphColourerType.BRUTEFORCE);	
+//		test(graph1, 2, GraphColourerType.BACKTRACKING);
+//		System.out.println("");
+		
+		boolean[][] graph2 = {{false, true, true, true}, 
+				{true, false, true, false},
+				{true, true, false, true},
+				{true, false, true, false}};
+		test(graph2, 3, GraphColourerType.BRUTEFORCE);	
+		test(graph2, 3, GraphColourerType.BACKTRACKING);
+		
+		
 	}
 	
 	private static void test(boolean[][] graph, int nColours, GraphColourerType type){

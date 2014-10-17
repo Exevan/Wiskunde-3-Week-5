@@ -1,5 +1,7 @@
 package graphColouring;
 
+import java.util.Arrays;
+
 public class GraphColourerBruteforce implements IGraphColourer {
 
 	@Override	
@@ -30,8 +32,7 @@ public class GraphColourerBruteforce implements IGraphColourer {
 			}
 		}
 		return true;
-	}
-	
+	}	
 }
 
 
