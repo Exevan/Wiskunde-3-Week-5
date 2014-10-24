@@ -25,8 +25,14 @@ public class HamiltonianCycleFinderBruteforce implements IHamiltonianCycleFinder
 	}
 
 	private boolean isValid(boolean[][] graph, int[] cycle){
-		return false;
+		boolean nodesInCycle[] = new boolean[graph.length];
+		for(int i = 0; i < cycle.length; ++i) {
+			int a = cycle[i];
+			int b = cycle[(i+1) % cycle.length];
+			if(!graph[a][b] || nodesInCycle[a]) return false;
+			nodesInCycle[a] = true;
+		}
+		return true;
 	}
-
 }
 

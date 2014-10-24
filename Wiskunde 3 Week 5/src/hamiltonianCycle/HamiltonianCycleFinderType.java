@@ -1,5 +1,5 @@
 package hamiltonianCycle;
 
 public enum HamiltonianCycleFinderType {
-	BRUTEFORCE;
+	BRUTEFORCE, BACKTRACKING;
 }

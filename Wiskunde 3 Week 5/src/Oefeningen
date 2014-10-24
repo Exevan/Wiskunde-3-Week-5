@@ -56,4 +56,8 @@ f) Ja, het maakt niet uit of we als antwoord [1, 2, 3, 2] of [0, 1, 2, 1] bekome
 	We kunnen dus veilig een vaste kleur kieze voor de eerste node.
 g) hint: er moet in brute force en backtrack telkens maar 1 getal aangepast worden
 
+Oefening 5
+a) De graaf ((A, B)) of in adjancency matrix [[0, 1], [1, 0]] heeft geen Hamiltoniaanse kring.
+b) 
+
 	

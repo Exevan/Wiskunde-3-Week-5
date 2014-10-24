@@ -17,8 +17,8 @@ public class HamiltonianCycleDriver {
 				  			  {true, true, false, false, false},
 				  			  {false, true, true, false, false}};
 		
-		test(graph1, HamiltonianCycleFinderType.BRUTEFORCE);		
-		test(graph2, HamiltonianCycleFinderType.BRUTEFORCE);		
+		test(graph1, HamiltonianCycleFinderType.BACKTRACKING);		
+		test(graph2, HamiltonianCycleFinderType.BACKTRACKING);		
 	}
 	
 	private static void test(boolean[][] graph, HamiltonianCycleFinderType type){
@@ -30,5 +30,4 @@ public class HamiltonianCycleDriver {
 			System.out.println("Geen Hamiltoniaanse kring.");
 		}	
 	}
-
 }
